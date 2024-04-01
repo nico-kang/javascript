@@ -1,7 +1,7 @@
 ## implement `_.once()`
 
-#### _.once(func) is used to force a function to be called only once, later calls only returns the result of first call.
-#### Can you implement your own once()?
+_.once(func) is used to force a function to be called only once, later calls only returns the result of first call.
+Can you implement your own once()?
 
 ```
 function func(num) {
@@ -17,17 +17,17 @@ onced(2)
 // 1, even 2 is passed, previous result is returned
 ```
 
-#### we are target is will onced mutiple call and pass in different parameter but return the first time result
+we are target is will onced mutiple call and pass in different parameter but return the first time result
 
-#### steps are as follows
+steps are as follows
 
-#### first we create an onced function and accept an func fucntion
+first we create an onced function and accept an func fucntion
 
-#### in an function create an result equal null and create switch is isCalled equal false and create an anonymous function only accept one parameter is args and return anonymous function
+in an function create an result equal null and create switch is isCalled equal false and create an anonymous function only accept one parameter is args and return anonymous function
 
-#### an anonymous function if isCalled equal true so return result and then use call method called func function and pass in this and args and equal to result
+an anonymous function if isCalled equal true so return result and then use call method called func function and pass in this and args and equal to result
 
-#### and then the isCalled equal true so next call Stepped up to the judgment and laste return result
+and then the isCalled equal true so next call Stepped up to the judgment and laste return result
 
 ```
 function once(func) {

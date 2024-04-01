@@ -1,13 +1,16 @@
-we are say pipe function in javascript
+## we are say pipe function in javascript
 
-Pipe function to our will some small functions are arbitrarily grouped together, so more convenient and clear
+### Pipe function to our will some small functions are arbitrarily grouped together, so more convenient and clear
 
-For example you now have some simple function
+### For example you now have some simple function
+```
 const times = (y) =>  (x) => x * y
 const plus = (y) => (x) => x + y
 const subtract = (y) =>  (x) => x - y
 const divide = (y) => (x) => x / y
-Your pipe() would be used to generate new functions
+```
+### Your pipe() would be used to generate new functions
+```
 pipe([
   times(2),
   times(3)
@@ -27,22 +30,23 @@ pipe([
   divide(4)
 ]) 
 // (x * 2 - 3) / 4
-to make things simple, functions passed to pipe() will all accept 1 argument
+```
+### to make things simple, functions passed to pipe() will all accept 1 argument
 
 
-the steps are as follows
+### the steps are as follows
 
-first create an pipe function accept an array include contain multiple composition function
+### first create an pipe function accept an array include contain multiple composition function
 
-Because pipe will use to generate new function
-So Include pipe return an anonymous function and accept one parameter
+### Because pipe will use to generate new function
+### So Include pipe return an anonymous function and accept one parameter
 
-And then return reduce method and use reduce method to loop multiple simple function in anonymous function, the reduce method will accept two parameter, Number one is single simple function, Number two is original value
+### And then return reduce method and use reduce method to loop multiple simple function in anonymous function, the reduce method will accept two parameter, Number one is single simple function, Number two is original value
 
-And then return simple function and use call method execution to simple function and pass in two parameter, Number one is this, Number two is original value
+### And then return simple function and use call method execution to simple function and pass in two parameter, Number one is this, Number two is original value
 
 
-
+```
 /**
  * @param {Array<(arg: any) => any>} funcs 
  * @return {(arg: any) => any}
@@ -78,3 +82,4 @@ console.log(pipe([
   subtract(3),
   divide(4)
 ])(2))
+```
